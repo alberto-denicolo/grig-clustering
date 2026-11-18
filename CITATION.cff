@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "grig: clustering in the Geometric Random Intersection Graph"
+authors:
+  - family-names: "De Nicolò"
+    given-names: "Alberto"
+version: 1.0.0
+date-released: 2026-11-18
+license: MIT
+repository-code: "https://github.com/alberto-denicolo/grig-clustering"
+references:
+  - type: thesis
+    title: "The Geometric Random Intersection Graph Model: Clustering and Local Structure"
+    authors:
+      - family-names: "De Nicolò"
+        given-names: "Alberto"
+    thesis-type: "Master's thesis"
+    institution:
+      name: "Università degli Studi di Padova"
+    year: 2026
+  - type: article
+    title: "Geometric random intersection graphs with general connection probabilities"
+    authors:
+      - family-names: "Deijfen"
+        given-names: "Maria"
+      - family-names: "Michielan"
+        given-names: "Riccardo"
+    journal: "Journal of Applied Probability"
+    volume: 61
+    issue: 4
+    year: 2024
+    doi: "10.1017/jpr.2024.18"
