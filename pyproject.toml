@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "grig"
+version = "1.0.0"
+description = "Clustering in the Geometric Random Intersection Graph: simulation and theory, code of my master's thesis"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Alberto De Nicolò" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.11",
+    "pandas>=2.0",
+    "matplotlib>=3.7",
+    "pyyaml>=6.0",
+    "joblib>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.5", "networkx>=3.0"]
+
+[project.scripts]
+grig = "grig.cli:main"
+
+[project.urls]
+Repository = "https://github.com/alberto-denicolo/grig-clustering"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
