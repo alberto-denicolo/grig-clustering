@@ -7,6 +7,8 @@
 Code and experiments for my master's thesis *The Geometric Random Intersection Graph Model: Clustering and Local
 Structure* (University of Padova, 2026, supervisor Prof. Alessandra Bianchi).
 
+The full text is available here: [thesis (PDF)](tesi_magistrale_DeNicolo.pdf).
+
 The GRIG (Deijfen and Michielan, 2024) places vertices and groups as two independent Poisson processes in ℝᵈ; a vertex
 joins a group with probability g(distance), and two vertices are adjacent when they share a group. This package
 
