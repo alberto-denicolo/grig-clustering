@@ -1,0 +1,110 @@
+# Small version of thesis.yaml: every experiment in a couple of minutes (used by CI).
+seed: 1
+n_jobs: 1
+
+kernels:
+  mu: 1.0
+  tol: 1.0e-4
+  kernels:
+    - {name: boolean, normalize: true}
+    - {name: gaussian, normalize: true}
+
+connection_probability:
+  lam: 1.0
+  L: 12
+  replicates: 4
+  min_pairs: 100
+  cases:
+    - {kernel: {name: boolean, R: 1}, mu: 1.0, r_max: 2.2}
+
+expected_degree:
+  kernel: {name: boolean, R: 1}
+  L: 12
+  replicates: 10
+  points: [[1, 1], [2, 0.5]]
+
+convergence:
+  kernel: {name: boolean, R: 1}
+  lam: 1.5
+  mu: 1.0
+  L: [8, 12]
+  replicates_at_max: 4
+
+vertex_intensity:
+  kernel: {name: boolean, R: 1}
+  mu: 1.0
+  L: 10
+  replicates: 4
+  lam: [0.5, 1.0, 2.0]
+
+decomposition:
+  kernel: {name: boolean, R: 1}
+  lam: 2.0
+  L: 10
+  replicates: 4
+  mu: [0.1, 1.0]
+  theory_mu: [0.1, 1.0]
+
+sparse_regime:
+  kernel: {name: boolean, R: 1}
+  lam: 2.0
+  L: 10
+  replicates: 4
+  table_mu: [0.1, 0.5]
+  theory_mu: {log: [0.001, 1], num: 8}
+  fit_range: [0.002, 0.05]
+
+attribute_rich:
+  kernel: {name: boolean, R: 1}
+  lam: 2.0
+  L: 10
+  replicates: 3
+  mu: [1, 10]
+  theory_mu: [1, 10, 100]
+
+continuum_limit:
+  kernel: {name: boolean, R: 1}
+  lam: 1.5
+  dilations: [1.0, 1.4]
+  L_min: 10
+  L_per_r: 6
+  replicates: 3
+  nu: [0.5, 5]
+  theory_nu: {log: [0.1, 100], num: 10}
+
+dimensions:
+  d: [1, 2]
+  batches: 4
+  batch_size: 20000
+
+kernel_comparison:
+  lam: 2.0
+  L: 8
+  replicates: 3
+  kernels:
+    - {name: boolean, normalize: true}
+  mu: [0.5, 2.0]
+  theory_mu: [0.5, 2.0]
+
+grig_vs_rcm:
+  kernel: {name: boolean, R: 1}
+  lam: 1.5
+  L: 10
+  replicates: 3
+  min_vertices: 10
+  mu: [1.0]
+  theory_mu: [0.5, 1.0]
+
+higher_dimensions:
+  d: [1, 2]
+  lam: {1: 4.0, 2: 4.0}
+  L: {1: 100, 2: 8}
+  replicates: 3
+  mu: [0.5, 5]
+
+percolation:
+  kernel: {name: boolean, R: 1}
+  L: 10
+  replicates: 3
+  mu: [1.0]
+  lam: [0.2, 1.0]
